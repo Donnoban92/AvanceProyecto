@@ -1,0 +1,34 @@
+ <app-header></app-header>
+<ion-content [fullscreen]="true"> 
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Content</ion-title>>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-menu-toggle>
+        <ion-button expand="block" [routerLink]="['/catalogo']">CATALOGO</ion-button>
+        <ion-button expand="block" [routerLink]="['/registro']">REGISTRO DE USUARIO</ion-button>
+        <ion-button expand="block" [routerLink]="['/inicio-sesion']">INICIO DE SESION</ion-button>
+        <ion-button>CERRAR</ion-button>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-button expand="block" [routerLink]="['/home']">VOLVER</ion-button>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-menu-toggle>
+        <ion-button>MENU</ion-button>
+      </ion-menu-toggle>
+    </ion-content>
+  </div>
+</ion-content>
+<app-footer></app-footer>
+
+
