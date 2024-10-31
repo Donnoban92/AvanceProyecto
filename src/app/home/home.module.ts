@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { DeejayServiceService } from './servicios/deejay-service.service';
 
 @NgModule({
   imports: [
@@ -12,8 +14,10 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
+  providers: [DeejayServiceService],
   declarations: [HomePage]
 })
 export class HomePageModule {}

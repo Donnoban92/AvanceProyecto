@@ -1,14 +1,43 @@
 <app-header></app-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion_content">
 
-  <ion-card>
-    <img alt="registro"
-      src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg" />
-    <ion-card-content>
-      <ion-button expand="block" [routerLink]="['/inicio-sesion']">INICIO DE SESION</ion-button>
-      <ion-button expand="block" [routerLink]="['/registro']">REGISTRO DE USUARIO</ion-button>
-    </ion-card-content>
+  <ion-card class="ion_card">
+    <div class="container_img">
+      <img alt="registro"
+        src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg" />
+    </div>
+
+    <div id="container" class="ion_container">
+        
+      <ion-list >
+
+        <ion-item class="ion_item">
+          
+          
+          <ion-label>@for (item of items; track item.id) {
+            <h1>¿Buscas un dj para un evento?</h1>
+            <ion-avatar slot="start">
+              <img src="{{item.picture.thumbnail}}" alt="">
+            </ion-avatar>
+
+            <p>{{ item.name.title }} {{item.name.first}} {{item.name.last}}</p>
+
+            <p>{{ item.email }}</p>
+            <p>{{ item.phone }}</p>
+            <h3>¡Refresca la página para ver un nuevo dj!</h3>
+            }
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+    </div>
+    
+      <ion-card-content>
+        <ion-button expand="block" [routerLink]="['/inicio-sesion']">INICIO DE SESION</ion-button>
+        <ion-button expand="block" [routerLink]="['/registro']">REGISTRO DE USUARIO</ion-button>
+      </ion-card-content>
+    
 
   </ion-card>
 
